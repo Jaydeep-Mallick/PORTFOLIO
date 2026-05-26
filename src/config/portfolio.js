@@ -100,6 +100,6 @@ export const portfolioConfig = {
   emailjs: {
     serviceId: "service_2a5y38e",
     templateId: "template_7hfqqw8",
-    publicKey: "YOUR_PUBLIC_KEY"
+    publicKey: "jUWSvJ_BMio8gxbbY"
   }
 };
