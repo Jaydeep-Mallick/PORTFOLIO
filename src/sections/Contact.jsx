@@ -38,7 +38,12 @@ export default function Contact() {
     };
 
     // If credentials are not set, fall back to testing simulation gracefully
-    if (serviceId === "YOUR_SERVICE_ID" || templateId === "YOUR_TEMPLATE_ID" || !publicKey) {
+    if (
+      serviceId === "YOUR_SERVICE_ID" || 
+      templateId === "YOUR_TEMPLATE_ID" || 
+      !publicKey || 
+      publicKey === "YOUR_PUBLIC_KEY"
+    ) {
       console.warn("EmailJS credentials are not configured in portfolio.js. Simulating dispatch...");
       setTimeout(() => {
         setStatus("success");
