@@ -31,9 +31,14 @@ export default function Contact() {
     const { serviceId, templateId, publicKey } = portfolioConfig.emailjs;
 
     const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+      title: `Portfolio Contact from ${formData.name}`,
+      time: new Date().toLocaleString(),
+      // Keep old parameters for backwards compatibility
       from_name: formData.name,
       reply_to: formData.email,
-      message: formData.message,
       to_name: portfolioConfig.personal.name,
     };
 
